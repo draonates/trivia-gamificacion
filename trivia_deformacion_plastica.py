@@ -814,6 +814,14 @@ else:
         else:
             df.to_csv(archivo, index=False)
 
+        # Guardar también en Excel
+        try:
+            archivo_excel = 'resultados_deformacion.xlsx'
+            df_total = pd.read_csv(archivo)
+            df_total.to_excel(archivo_excel, index=False)
+        except Exception as e:
+            st.warning(f'No se pudo guardar el archivo Excel: {e}')
+
         st.markdown('---')
         st.markdown('## 🤮 Revisión de Respuestas')
 
