@@ -1,3 +1,5 @@
+pip install openpyxl
+
 import streamlit as st
 import pandas as pd
 import datetime
@@ -851,3 +853,5 @@ else:
                     st.pyplot(fig)
             except Exception as e:
                 st.error(f'No se pudo mostrar el gráfico de progreso: {e}')
+
+
