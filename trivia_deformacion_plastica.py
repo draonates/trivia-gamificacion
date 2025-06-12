@@ -40,6 +40,15 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
+st.markdown("""
+    <style>
+    /* Ajuste específico para textos dentro de st.success, st.warning, st.error */
+    .stAlert > div {
+        color: black !important;
+    }
+    </style>
+""", unsafe_allow_html=True)
+
 
 preguntas = {
     'Certamen 1': {
