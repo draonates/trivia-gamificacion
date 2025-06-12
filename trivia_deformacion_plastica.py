@@ -11,18 +11,72 @@ st.set_page_config(page_title='Trivia Deformación Plástica', layout='centered'
 
 st.markdown("""
     <style>
-    /* Fuerza el color negro en radio buttons */
-    .stRadio > div label {
+    html, body, .stApp {
+        background-color: white !important;
         color: black !important;
-        opacity: 1 !important;
+        font-family: 'Segoe UI', sans-serif;
     }
-    /* También para listas nuevas o estilo moderno */
-    label[data-baseweb="radio"] {
+
+    /* Títulos */
+    h1, h2, h3 {
+        color: #111 !important;
+        font-weight: 700;
+    }
+
+    /* Texto general */
+    .stMarkdown, .css-1v0mbdj, .css-18ni7ap {
+        color: #222 !important;
+        font-size: 16px !important;
+    }
+
+    /* Inputs */
+    input, textarea, select {
+        background-color: white !important;
         color: black !important;
+        border: 1px solid #888 !important;
+        border-radius: 6px !important;
+        padding: 6px !important;
+    }
+
+    /* Botones */
+    .stButton > button {
+        color: black !important;
+        background-color: #f5f5f5 !important;
+        border: 2px solid #444 !important;
+        border-radius: 8px !important;
+        padding: 0.5em 1em !important;
+        font-weight: bold;
+        transition: 0.3s ease;
+    }
+    .stButton > button:hover {
+        background-color: #e0e0e0 !important;
+        border-color: #111 !important;
+    }
+
+    /* Cuadro de selección de radio buttons */
+    .stRadio > div label, label[data-baseweb="radio"] {
+        color: black !important;
+        font-size: 15px !important;
         opacity: 1 !important;
+        padding-left: 5px;
+    }
+
+    /* Alertas (éxito, advertencia, error) */
+    .stAlert > div {
+        color: black !important;
+        font-size: 15px !important;
+    }
+
+    /* Margen visual entre bloques */
+    .block-container {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        padding-left: 3rem;
+        padding-right: 3rem;
     }
     </style>
 """, unsafe_allow_html=True)
+
 
 preguntas = {
     'Certamen 1': {
