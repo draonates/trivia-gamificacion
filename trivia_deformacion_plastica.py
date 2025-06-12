@@ -799,13 +799,13 @@ else:
         st.balloons()
         st.success(f'🎉 {st.session_state.nombre}, obtuviste {st.session_state.puntaje} de {len(lista_preguntas)} en nivel {nivel_actual}')
 
-        Resultados = {
-            'Nombre': st.session_state.nombre,
-            'Certamen': certamen_actual,
-            'Puntaje': st.session_state.puntaje,
-            'Total': len(lista_preguntas),
-            'Nivel': nivel_actual,
-            'Fecha': datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+   #     Resultados = {
+    #        'Nombre': st.session_state.nombre,
+    #        'Certamen': certamen_actual,
+    #        'Puntaje': st.session_state.puntaje,
+    #        'Total': len(lista_preguntas),
+    #        'Nivel': nivel_actual,
+    #        'Fecha': datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
         }
 
        # archivo = 'resultados_deformacion.csv'
