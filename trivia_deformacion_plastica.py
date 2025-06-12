@@ -110,7 +110,7 @@ preguntas['Certamen 2']['Fácil'] += [
 preguntas['Certamen 2']['Medio'] += [
     {
         'question': '¿Qué parámetro en la ecuación de fluencia ε̇ = A·σⁿ·exp(–Q/RT) representa el control por difusión?',
-        'options': ['n', 'A', 'Q', 'R'],
+        'options': ['n', 'A,n', 'Q', 'R,A,n'],
         'answer': 2,
         'formula': 'ε̇ = A·σ^n·e^{-Q/RT}'
     },
@@ -122,13 +122,13 @@ preguntas['Certamen 2']['Medio'] += [
     },
     {
         'question': '¿Qué factor afecta directamente el valor del exponente de esfuerzo (n) en el comportamiento por fluencia?',
-        'options': ['Tamaño de grano', 'Composición química', 'Temperatura y mecanismo de deformación', 'Tipo de ensayo de tracción'],
+        'options': ['Tamaño de grano', 'Composición química, naturaleza del esfuerzo aplicado', 'Temperatura y mecanismo de deformación', 'Tipo de ensayo de tracción'],
         'answer': 2,
         'formula': ''
     },
     {
         'question': 'En un ensayo de fluencia, si se duplica la temperatura (en K), ¿qué componente se ve más afectado en la ecuación constitutiva?',
-        'options': ['El exponente n', 'La constante A', 'La energía de activación Q', 'El término exponencial exp(-Q/RT)'],
+        'options': ['El exponente n', 'La constante A', 'La energía de activación', 'El término exponencial'],
         'answer': 3,
         'formula': ''
     },
@@ -137,7 +137,49 @@ preguntas['Certamen 2']['Medio'] += [
         'options': ['Difusión en el volumen', 'Deslizamiento de dislocaciones', 'Difusión por contornos de grano', 'Formación de maclas'],
         'answer': 2,
         'formula': ''
-    }
+    },
+    {
+        'question': '¿Cual de las siguientes opciones describe mejor el fenomeno de fluencia?',
+        'options': ['Deformación elastica que ocurre debido a una carga constante por periodos largos de tiempo', 'Deformación plástica dependiente del tiempo debido a una carga constante por periodos largos de tiempo', 'Proceso de deformación asistida por difusión atómica durante periodos largos de tiempo sin dependencia de la velocidad y con carga constante', 'a) y c)'],
+        'answer': 1,
+        'formula': ''
+    },
+    {
+        'question': '¿Qué procesos gobiernan la etapa de Creep primario?',
+        'options': ['Coble o Nabarro-Herring', 'Deslizamiento de dislocaciones', 'Multiplicación de dislocaciones e interacción y entrelazamiento de dislocaciones', 'Todas las anteriores'],
+        'answer': 2,
+        'formula': ''
+    },
+    {
+        'question': '¿Qué mecanismos gobiernan el Creep estacionario?',
+        'options': ['Trepado de dislocaciones', 'Deslizamiento de dislocaciones', 'Difusión atómica, recuperación dinámica', 'Todas las anteriores','a) y b)'],
+        'answer': 3,
+        'formula': ''
+    },
+    {
+        'question': '¿Por qué aumenta la plásticidad a altas temperaturas?',
+        'options': ['sistema atómico con mayor energía térmica', 'Activación de mecanismos termoactivos', 'Difusión atómica', 'Todas las anteriores'],
+        'answer': 1,
+        'formula': ''
+    },
+    {
+        'question': '¿Cuales son los mecanismos termoactivos de plásticidad en Creep?',
+        'options': ['Trepado de dislocaciones, Difusión atómica volumetrica y de borde de grano, Deslizamiento de grano, Recristalización Dinámica', 'Recristalización dinámica, Maclado, Difusión atómica, Trepado de dislocaciones, Deslizamiento de dislocaciones', 'Difusión por contornos de grano', 'Trepado de dislocaciones, deslizamiento de borde de grano'],
+        'answer': 0,
+        'formula': ''
+    },
+    {
+        'question': '¿Que significa el tener un n de 3.5 en Creep?',
+        'options': ['Creep difusional', 'Deslizamiento de bordes de grano y deslizamiento de dislocaciones', 'Trepado de dislocaciones', 'Trepado y deslizamiento de dislocaciones'],
+        'answer': 1,
+        'formula': ''
+    },
+    {
+        'question': '¿En que consiste el trepado de dislocaciones?',
+        'options': ['La dislocación sale temporalmente de su plano de deslizamiento debido a campos difusionales cuando se encuentra con un sistema de bloqueo', 'La dislocación se mueve perpendicularmente a su plano de deslizamiento mediante difusión de vacancias', 'La dislocación se mueve a otro plano de deslizamiento activo mediante difusión de vacancias', 'La dislocación pasa a ser sesil'],
+        'answer': 1,
+        'formula': ''
+    },
 ]
 
 
