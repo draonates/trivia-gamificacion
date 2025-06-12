@@ -849,8 +849,9 @@ try:
 except Exception as e:
     st.warning(f"No se pudo guardar en Google Sheets: {e}")
 
-        st.markdown('---')
-        st.markdown('## 🤮 Revisión de Respuestas')
+    st.markdown('---')
+        
+    st.markdown('## 🤮 Revisión de Respuestas')
 
         for i, h in enumerate(st.session_state.historial):
             pregunta = lista_preguntas[i]
