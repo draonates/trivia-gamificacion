@@ -836,12 +836,31 @@ if 'nombre' not in st.session_state:
 
 st.title('Trivia: Fundamentos de la Deformación Plástica')
 
+#if st.session_state.nombre == '':
+ #   st.session_state.nombre = st.text_input('Ingresa tu nombre:')
+  #  st.session_state.certamen = st.selectbox('Selecciona el certamen:', list(preguntas.keys()))
+   # st.session_state.nivel = st.selectbox('Selecciona el nivel de dificultad:', ['Fácil', 'Medio'])
+    #if st.session_state.nombre and st.button('Comenzar'):
+     #   st.rerun()
 if st.session_state.nombre == '':
-    st.session_state.nombre = st.text_input('Ingresa tu nombre:')
-    st.session_state.certamen = st.selectbox('Selecciona el certamen:', list(preguntas.keys()))
-    st.session_state.nivel = st.selectbox('Selecciona el nivel de dificultad:', ['Fácil', 'Medio'])
-    if st.session_state.nombre and st.button('Comenzar'):
-        st.rerun()
+    st.subheader("Paso 1: Selecciona el Certamen")
+    st.session_state.certamen = st.selectbox('Selecciona el certamen:', list(preguntas.keys()), key="certamen_selector")
+
+    if st.session_state.certamen:
+        st.subheader("Paso 2: Selecciona el Nivel de Dificultad")
+        st.session_state.nivel = st.selectbox('Selecciona el nivel de dificultad:', ['Fácil', 'Medio'], key="nivel_selector")
+
+        if st.session_state.nivel:
+            st.subheader("Paso 3: Ingresa tu nombre completo")
+            st.session_state.nombre = st.text_input('Nombre y Apellido:', key="nombre_input")
+
+            if st.session_state.nombre and st.button('Comenzar'):
+                st.session_state.q_idx = 0
+                st.session_state.puntaje = 0
+                st.session_state.historial = []
+                st.rerun()
+
+
 else:
     certamen_actual = st.session_state.certamen
     nivel_actual = st.session_state.nivel
