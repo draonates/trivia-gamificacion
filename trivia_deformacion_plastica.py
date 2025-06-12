@@ -9,6 +9,38 @@ import matplotlib.pyplot as plt
 
 st.set_page_config(page_title='Trivia Deformación Plástica', layout='centered')
 
+# Aplicar estilo blanco con letras negras
+st.markdown("""
+    <style>
+    body {
+        background-color: white;
+        color: black;
+    }
+    .stApp {
+        background-color: white;
+        color: black;
+    }
+    .css-1d391kg, .css-qbe2hs, .css-ffhzg2, .st-bc, .st-c5 {
+        background-color: white !important;
+        color: black !important;
+    }
+    .css-1v0mbdj, .css-1v0mbdj input, .stTextInput input {
+        background-color: white !important;
+        color: black !important;
+        border: 1px solid #999;
+    }
+    .css-1cpxqw2 {
+        color: black !important;
+    }
+    .stButton button {
+        color: black !important;
+        background-color: white !important;
+        border: 1px solid black;
+    }
+    </style>
+""", unsafe_allow_html=True)
+
+
 preguntas = {
     'Certamen 1': {
         'Fácil': [],
