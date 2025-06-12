@@ -24,6 +24,18 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
+preguntas = {
+    'Certamen 1': {
+        'Fácil': [],
+        'Medio': []
+    },
+    'Certamen 2': {
+        'Fácil': [],
+        'Medio': []
+    }
+}
+
+
 preguntas['Certamen 2']['Fácil'] += [
     {
         'question': '¿Qué tipo de mecanismo de creep es dominante a bajas tensiones y altas temperaturas en materiales policristalinos?',
