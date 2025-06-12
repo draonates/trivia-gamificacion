@@ -33,7 +33,7 @@ st.markdown("""
     /* Inputs */
     input, textarea, select {
         background-color: white !important;
-        color: black !important;
+        color: white !important;
         border: 1px solid #888 !important;
         border-radius: 6px !important;
         padding: 6px !important;
