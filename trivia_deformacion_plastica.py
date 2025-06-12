@@ -179,7 +179,7 @@ preguntas['Certamen 2']['Medio'] += [
         'options': ['La dislocación sale temporalmente de su plano de deslizamiento debido a campos difusionales cuando se encuentra con un sistema de bloqueo', 'La dislocación se mueve perpendicularmente a su plano de deslizamiento mediante difusión de vacancias', 'La dislocación se mueve a otro plano de deslizamiento activo mediante difusión de vacancias', 'La dislocación pasa a ser sesil'],
         'answer': 1,
         'formula': ''
-    },
+    }
 ]
 
 
