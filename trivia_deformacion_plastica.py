@@ -112,7 +112,7 @@ st.markdown("""
     /* Inputs y selects */
     input, textarea, select, .stTextInput input, .stSelectbox div[role="combobox"] {
         background-color: white !important;
-        color: black !important;
+        color: white !important;
         border: 1px solid #333 !important;
         border-radius: 6px !important;
         padding: 6px !important;
@@ -121,18 +121,18 @@ st.markdown("""
     /* Dropdown fix */
     .stSelectbox div[data-baseweb="select"] {
         background-color: white !important;
-        color: black !important;
+        color: white !important;
     }
 
     /* Forzar color y fondo en opciones desplegadas */
     .stSelectbox ul {
         background-color: white !important;
-        color: black !important;
+        color: white !important;
     }
 
     /* Botones */
     .stButton > button {
-        color: black !important;
+        color: white !important;
         background-color: white !important;
         border: 2px solid black !important;
         border-radius: 8px !important;
@@ -149,7 +149,7 @@ st.markdown("""
     /* Radio buttons */
     div[data-baseweb="radio"] div[role="radio"] {
         background-color: white !important;
-        color: black !important;
+        color: white !important;
         opacity: 1 !important;
     }
 
