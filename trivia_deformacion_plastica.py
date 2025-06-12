@@ -799,30 +799,6 @@ else:
         st.balloons()
         st.success(f'🎉 {st.session_state.nombre}, obtuviste {st.session_state.puntaje} de {len(lista_preguntas)} en nivel {nivel_actual}')
 
-   #     Resultados = {
-    #        'Nombre': st.session_state.nombre,
-    #        'Certamen': certamen_actual,
-    #        'Puntaje': st.session_state.puntaje,
-    #        'Total': len(lista_preguntas),
-    #        'Nivel': nivel_actual,
-    #        'Fecha': datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
-    #    }
-
-       # archivo = 'resultados_deformacion.csv'
-       # df = pd.DataFrame([Resultados])
-       # if os.path.exists(archivo):
-       #     df.to_csv(archivo, mode='a', header=False, index=False)
-      #  else:
-       #     df.to_csv(archivo, index=False)
-
-        # Guardar también en Excel
-    #    try:
-    #        archivo_excel = 'resultados_deformacion.xlsx'
-     #       df_total = pd.read_csv(archivo)
-      #      df_total.to_excel(archivo_excel, index=False)
-     #   except Exception as e:
-      #      st.warning(f'No se pudo guardar el archivo Excel: {e}')
-
         import gspread
 from oauth2client.service_account import ServiceAccountCredentials
 
@@ -838,12 +814,12 @@ cliente = gspread.authorize(creds)
 try:
     sheet = cliente.open("Trivia Deformación Plástica").worksheet("Resultados")
     fila = [
-        Resultados['Nombre'],
-        Resultados['Certamen'],
-        Resultados['Puntaje'],
-        Resultados['Total'],
-        Resultados['Nivel'],
-        Resultados['Fecha']
+        resultado['Nombre'],
+        resultado['Certamen'],
+        resultado['Puntaje'],
+        resultado['Total'],
+        resultado['Nivel'],
+        resultado['Fecha']
     ]
     sheet.append_row(fila)
     st.success("Resultado guardado en Google Sheets correctamente.")
