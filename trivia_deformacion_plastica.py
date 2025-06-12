@@ -799,32 +799,46 @@ else:
         st.balloons()
         st.success(f'🎉 {st.session_state.nombre}, obtuviste {st.session_state.puntaje} de {len(lista_preguntas)} en nivel {nivel_actual}')
 
-        import gspread
-from oauth2client.service_account import ServiceAccountCredentials
+        resultado = {
+            'Nombre': st.session_state.nombre,
+            'Certamen': certamen_actual,
+            'Puntaje': st.session_state.puntaje,
+            'Total': len(lista_preguntas),
+            'Nivel': nivel_actual,
+            'Fecha': datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+        }
 
-scope = [
-    "https://spreadsheets.google.com/feeds",
-    "https://www.googleapis.com/auth/drive"
-]
+        archivo = 'resultados_deformacion.csv'
+        df = pd.DataFrame([resultado])
+        if os.path.exists(archivo):
+            df.to_csv(archivo, mode='a', header=False, index=False)
+        else:
+            df.to_csv(archivo, index=False)
 
-# Usar el secreto desde Streamlit Cloud
-creds = ServiceAccountCredentials.from_json_keyfile_dict(st.secrets["gspread"], scope)
-cliente = gspread.authorize(creds)
+        try:
+            import gspread
+            from oauth2client.service_account import ServiceAccountCredentials
 
-try:
-    sheet = cliente.open("Trivia Deformación Plástica").worksheet("Resultados")
-    fila = [
-        resultado['Nombre'],
-        resultado['Certamen'],
-        resultado['Puntaje'],
-        resultado['Total'],
-        resultado['Nivel'],
-        resultado['Fecha']
-    ]
-    sheet.append_row(fila)
-    st.success("Resultado guardado en Google Sheets correctamente.")
-except Exception as e:
-    st.warning(f"No se pudo guardar en Google Sheets: {e}")
+            scope = [
+                "https://spreadsheets.google.com/feeds",
+                "https://www.googleapis.com/auth/drive"
+            ]
+            creds = ServiceAccountCredentials.from_json_keyfile_dict(st.secrets["gspread"], scope)
+            cliente = gspread.authorize(creds)
+
+            sheet = cliente.open("Trivia Deformación Plástica").worksheet("Resultados")
+            fila = [
+                resultado['Nombre'],
+                resultado['Certamen'],
+                resultado['Puntaje'],
+                resultado['Total'],
+                resultado['Nivel'],
+                resultado['Fecha']
+            ]
+            sheet.append_row(fila)
+            st.success("Resultado guardado en Google Sheets correctamente.")
+        except Exception as e:
+            st.warning(f"No se pudo guardar en Google Sheets: {e}")
 
     st.markdown('---')
         
