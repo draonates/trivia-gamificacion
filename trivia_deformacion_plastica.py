@@ -9,73 +9,37 @@ import matplotlib.pyplot as plt
 
 st.set_page_config(page_title='Trivia Deformación Plástica', layout='centered')
 
+# Aplicar estilo blanco con letras negras
 st.markdown("""
     <style>
-    html, body, .stApp {
+    body {
+        background-color: white;
+        color: black;
+    }
+    .stApp {
+        background-color: white;
+        color: black;
+    }
+    .css-1d391kg, .css-qbe2hs, .css-ffhzg2, .st-bc, .st-c5 {
         background-color: white !important;
         color: black !important;
-        font-family: 'Segoe UI', sans-serif;
     }
-
-    /* Títulos */
-    h1, h2, h3 {
-        color: #111 !important;
-        font-weight: 700;
-    }
-
-    /* Texto general */
-    .stMarkdown, .css-1v0mbdj, .css-18ni7ap {
-        color: #222 !important;
-        font-size: 16px !important;
-    }
-
-    /* Inputs */
-    input, textarea, select {
+    .css-1v0mbdj, .css-1v0mbdj input, .stTextInput input {
         background-color: white !important;
         color: black !important;
-        border: 1px solid #888 !important;
-        border-radius: 6px !important;
-        padding: 6px !important;
+        border: 1px solid #999;
     }
-
-    /* Botones */
-    .stButton > button {
+    .css-1cpxqw2 {
         color: black !important;
-        background-color: #f5f5f5 !important;
-        border: 2px solid #444 !important;
-        border-radius: 8px !important;
-        padding: 0.5em 1em !important;
-        font-weight: bold;
-        transition: 0.3s ease;
     }
-    .stButton > button:hover {
-        background-color: #e0e0e0 !important;
-        border-color: #111 !important;
-    }
-
-    /* Cuadro de selección de radio buttons */
-    .stRadio > div label, label[data-baseweb="radio"] {
+    .stButton button {
         color: black !important;
-        font-size: 15px !important;
-        opacity: 1 !important;
-        padding-left: 5px;
-    }
-
-    /* Alertas (éxito, advertencia, error) */
-    .stAlert > div {
-        color: black !important;
-        font-size: 15px !important;
-    }
-
-    /* Margen visual entre bloques */
-    .block-container {
-        padding-top: 2rem;
-        padding-bottom: 2rem;
-        padding-left: 3rem;
-        padding-right: 3rem;
+        background-color: white !important;
+        border: 1px solid black;
     }
     </style>
 """, unsafe_allow_html=True)
+
 
 
 preguntas = {
