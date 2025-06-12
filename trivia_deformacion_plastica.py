@@ -152,7 +152,7 @@ preguntas['Certamen 2']['Medio'] += [
     },
     {
         'question': '¿Qué mecanismos gobiernan el Creep estacionario?',
-        'options': ['Trepado de dislocaciones', 'Deslizamiento de dislocaciones', 'Difusión atómica, recuperación dinámica', 'Todas las anteriores','a) y b)'],
+        'options': ['Trepado de dislocaciones', 'Deslizamiento de dislocaciones', 'Difusión atómica, recuperación dinámica', 'Todas las anteriores'],
         'answer': 3,
         'formula': ''
     },
