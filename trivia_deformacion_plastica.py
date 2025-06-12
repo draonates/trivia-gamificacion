@@ -11,63 +11,18 @@ st.set_page_config(page_title='Trivia Deformación Plástica', layout='centered'
 
 st.markdown("""
     <style>
-    html, body, .stApp {
-        background-color: white !important;
+    /* Fuerza el color negro en radio buttons */
+    .stRadio > div label {
         color: black !important;
+        opacity: 1 !important;
     }
-
-    /* Títulos */
-    h1, h2, h3, h4, h5, h6 {
+    /* También para listas nuevas o estilo moderno */
+    label[data-baseweb="radio"] {
         color: black !important;
-    }
-
-    /* Texto general */
-    .css-18ni7ap, .css-1v0mbdj, .css-1cpxqw2, .stMarkdown, .stTextInput, .stSelectbox {
-        color: black !important;
-    }
-
-    /* Inputs y selects */
-    input, textarea, select {
-        background-color: white !important;
-        color: black !important;
-        border: 1px solid #333 !important;
-    }
-
-    /* Botones */
-    .stButton>button {
-        color: black !important;
-        background-color: white !important;
-        border: 1px solid black !important;
-    }
-
-    /* Alertas de éxito, error, advertencia */
-    .stAlert > div {
-        color: black !important;
-    }
-
-    /* Radio buttons */
-    .css-qbe2hs, .css-1wivap2 {
-        color: black !important;
-    }
-
-    /* Opciones del radio */
-    label, .stRadio label {
-        color: black !important;
+        opacity: 1 !important;
     }
     </style>
 """, unsafe_allow_html=True)
-
-
-preguntas = {
-    'Certamen 1': {
-        'Fácil': [],
-        'Medio': []
-    },
-    'Certamen 2': {
-        'Fácil': [],
-        'Medio': []
-    }
-}
 
 preguntas['Certamen 2']['Fácil'] += [
     {
