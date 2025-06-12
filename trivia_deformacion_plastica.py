@@ -799,7 +799,7 @@ else:
         st.balloons()
         st.success(f'🎉 {st.session_state.nombre}, obtuviste {st.session_state.puntaje} de {len(lista_preguntas)} en nivel {nivel_actual}')
 
-        resultado = {
+        Resultados = {
             'Nombre': st.session_state.nombre,
             'Certamen': certamen_actual,
             'Puntaje': st.session_state.puntaje,
@@ -809,7 +809,7 @@ else:
         }
 
         archivo = 'resultados_deformacion.csv'
-        df = pd.DataFrame([resultado])
+        df = pd.DataFrame([Resultados])
         if os.path.exists(archivo):
             df.to_csv(archivo, mode='a', header=False, index=False)
         else:
@@ -838,12 +838,12 @@ cliente = gspread.authorize(creds)
 try:
     sheet = cliente.open("Trivia Deformación Plástica").worksheet("Resultados")
     fila = [
-        resultado['Nombre'],
-        resultado['Certamen'],
-        resultado['Puntaje'],
-        resultado['Total'],
-        resultado['Nivel'],
-        resultado['Fecha']
+        Resultados['Nombre'],
+        Resultados['Certamen'],
+        Resultados['Puntaje'],
+        Resultados['Total'],
+        Resultados['Nivel'],
+        Resultados['Fecha']
     ]
     sheet.append_row(fila)
     st.success("Resultado guardado en Google Sheets correctamente.")
