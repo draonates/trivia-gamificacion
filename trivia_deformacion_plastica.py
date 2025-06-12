@@ -874,21 +874,4 @@ for i, h in enumerate(st.session_state.historial):
 
             st.markdown('---')
 
-       # Progreso con gráfico
-if os.path.exists(archivo):
-    st.markdown('### Progreso por Partida')
-    try:
-        df_all = pd.read_csv(archivo)
-        df_filtrado = df_all[df_all['Nombre'] == st.session_state.nombre]
-        if not df_filtrado.empty:
-            fig, ax = plt.subplots()
-            ax.plot(df_filtrado['Fecha'], df_filtrado['Puntaje'], marker='o', label='Puntaje')
-            ax.set_title('Progreso de Puntaje por Partida')
-            ax.set_xlabel('Fecha')
-            ax.set_ylabel('Puntaje')
-            ax.legend()
-            plt.xticks(rotation=45)
-            st.pyplot(fig)
-    except Exception as e:
-        st.error(f'No se pudo mostrar el gráfico de progreso: {e}')
-
+      
