@@ -182,6 +182,19 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
+# Forzar el tema claro en Streamlit (opcional si usas tema automático)
+st.markdown(
+    """
+    <meta name="theme-color" content="#ffffff">
+    <style>
+        html[data-theme="dark"] {
+            filter: invert(100%) hue-rotate(180deg);
+        }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
 
 
 preguntas = {
