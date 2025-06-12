@@ -823,6 +823,33 @@ else:
         except Exception as e:
             st.warning(f'No se pudo guardar el archivo Excel: {e}')
 
+        import gspread
+from oauth2client.service_account import ServiceAccountCredentials
+
+scope = [
+    "https://spreadsheets.google.com/feeds",
+    "https://www.googleapis.com/auth/drive"
+]
+
+# Usar el secreto desde Streamlit Cloud
+creds = ServiceAccountCredentials.from_json_keyfile_dict(st.secrets["gspread"], scope)
+cliente = gspread.authorize(creds)
+
+try:
+    sheet = cliente.open("Trivia Deformación Plástica").worksheet("Resultados")
+    fila = [
+        resultado['Nombre'],
+        resultado['Certamen'],
+        resultado['Puntaje'],
+        resultado['Total'],
+        resultado['Nivel'],
+        resultado['Fecha']
+    ]
+    sheet.append_row(fila)
+    st.success("Resultado guardado en Google Sheets correctamente.")
+except Exception as e:
+    st.warning(f"No se pudo guardar en Google Sheets: {e}")
+
         st.markdown('---')
         st.markdown('## 🤮 Revisión de Respuestas')
 
