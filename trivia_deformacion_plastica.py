@@ -23,7 +23,7 @@ preguntas = {
 preguntas['Certamen 2']['Fácil'] += [
     {
         'question': '¿Qué tipo de mecanismo de creep es dominante a bajas tensiones y altas temperaturas en materiales policristalinos?',
-        'options': ['Creep por dislocación', 'Creep de Nabarro-Herring', 'Creep por maclado', 'Creep de transgranularidad'],
+        'options': ['Creep por dislocación', 'Creep por difusión', 'Creep por maclado', 'a) y c)'],
         'answer': 1,
         'formula': ''
     },
@@ -35,14 +35,14 @@ preguntas['Certamen 2']['Fácil'] += [
     },
     {
         'question': '¿Qué indica un exponente de esfuerzo n ≈ 1 en un gráfico log(ε̇) vs log(σ)?',
-        'options': ['Fractura frágil', 'Creep por trepado de dislocaciones', 'Creep difusional', 'Creep por maclado'],
+        'options': ['Deslizamiento de limite de grano', 'Creep por trepado de dislocaciones', 'Creep difusional', 'Creep por maclado'],
         'answer': 2,
         'formula': ''
     },
     {
-        'question': '¿Cuál es la relación general entre dureza H y límite de fluencia σy según la aproximación derivada por análisis de indentación?',
-        'options': ['H = σy / 3', 'H = 2σy', 'H = 3σy', 'H = σy²'],
-        'answer': 2,
+        'question': '¿Cuales son los mecanismos responsables del creep a altas temperaturas?',
+        'options': ['Difusión atómica', 'Movimiento de dislocaciones asistido por vacancias', 'Trepado de dislocaciones y deslizamiento de borde de grano', 'Todas las anteriores'],
+        'answer': 3,
         'formula': ''
     },
     {
@@ -53,8 +53,8 @@ preguntas['Certamen 2']['Fácil'] += [
     },
     {
         'question': '¿Qué condición debe cumplirse para que un componente metálico falle por fractura antes que por cedencia?',
-        'options': ['KIc < σy√(πa)', 'σy > KIc / √(πa)', 'σy < KIc / √(πa)', 'a < 0.1 mm'],
-        'answer': 2,
+        'options': ['KIc < σy√(πa)', 'σy < KI / √(πa)', 'σy < KIc / √(πa)', 'a < 0.1 mm'],
+        'answer': 0,
         'formula': ''
     },
     {
@@ -65,20 +65,20 @@ preguntas['Certamen 2']['Fácil'] += [
     },
     {
         'question': '¿Qué representa la energía de activación en el contexto del creep?',
-        'options': ['Energía de nucleación de dislocaciones', 'Energía para difusión atómica', 'Energía elástica almacenada', 'Energía de fractura'],
-        'answer': 1,
+        'options': ['Energía de nucleación de dislocaciones', 'Energía para difusión atómica', 'Energía elástica almacenada', 'Barrera energética que debe superarse para que ocurra el mecanismo específico de deformación dependiente de la temperatura'],
+        'answer': 3,
         'formula': ''
     },
     {
-        'question': '¿Qué implica una pendiente de -0.62 en una curva log(σy) vs. log(d) para microcolumnas de Ni?',
-        'options': ['Un comportamiento tipo Hall-Petch', 'Un comportamiento superelástico', 'Una fractura frágil', 'Una deformación elástica reversible'],
-        'answer': 0,
+        'question': '¿Cuales son los mecanismos de Creep a temperatura ambiente?',
+        'options': ['Difusión atómica', 'Deslizamiento de dislocaciones asistido por tensiones internas', 'Deslizamiento de dislocaciones por reorganización lenta de la red de dislocaciones', 'b) y c)'],
+        'answer': 3,
         'formula': ''
     },
     {
         'question': '¿Cuál es la consecuencia microestructural de disminuir el tamaño de grano en un mapa de mecanismos de deformación?',
-        'options': ['El régimen de Nabarro-Herring domina a menor T/Tm', 'Se desplazan las fronteras de los mecanismos hacia menor esfuerzo', 'Se favorece el endurecimiento por solución sólida', 'Desaparece el mecanismo de Coble creep'],
-        'answer': 0,
+        'options': ['El régimen de Nabarro-Herring domina a menor T/Tm', 'Los mecanismos que dependen de difusión por borde de grano se activan a menores tensiones', 'Se favorece el endurecimiento por solución sólida', 'Desaparece el mecanismo de Coble creep'],
+        'answer': 1,
         'formula': ''
     },
     {
@@ -89,13 +89,13 @@ preguntas['Certamen 2']['Fácil'] += [
     },
     {
         'question': '¿Cuál es la característica principal de la etapa terciaria de la fluencia?',
-        'options': ['El material se recupera', 'La deformación se estabiliza', 'La tasa de fluencia se acelera hasta la fractura', 'El esfuerzo disminuye a cero'],
+        'options': ['El material se recupera', 'La deformación se estabiliza', 'La tasa de deformación se acelera hasta la fractura', 'El esfuerzo disminuye a cero'],
         'answer': 2,
         'formula': ''
     },
     {
-        'question': '¿Qué representa típicamente el eje vertical en una curva de fluencia?',
-        'options': ['Esfuerzo aplicado', 'Velocidad angular', 'Deformación unitaria (ε)', 'Temperatura en grados'],
+        'question': '¿Qué mecanismo de fluencia se asocia la difusión atómica por limite de granos?',
+        'options': ['Nabarro-Herring', 'Fluencia por dislocaciones', 'Coble', 'a) y b)'],
         'answer': 2,
         'formula': ''
     },
