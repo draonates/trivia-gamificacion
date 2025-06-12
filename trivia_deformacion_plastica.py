@@ -874,7 +874,8 @@ for i, h in enumerate(st.session_state.historial):
             st.markdown('---')
 
         # Progreso con gráfico
-        if os.path.exists(archivo):
+        
+if os.path.exists(archivo):
             st.markdown('### Progreso por Partida')
             try:
                 df_all = pd.read_csv(archivo)
