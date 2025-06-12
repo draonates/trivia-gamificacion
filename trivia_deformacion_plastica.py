@@ -806,7 +806,7 @@ else:
     #        'Total': len(lista_preguntas),
     #        'Nivel': nivel_actual,
     #        'Fecha': datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
-        }
+    #    }
 
        # archivo = 'resultados_deformacion.csv'
        # df = pd.DataFrame([Resultados])
