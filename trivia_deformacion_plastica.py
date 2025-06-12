@@ -853,7 +853,8 @@ except Exception as e:
         
     st.markdown('## 🤮 Revisión de Respuestas')
 
-        for i, h in enumerate(st.session_state.historial):
+        
+for i, h in enumerate(st.session_state.historial):
             pregunta = lista_preguntas[i]
             respuesta_correcta = pregunta['options'][pregunta['answer']]
             es_correcta = h['respuesta'] == respuesta_correcta
