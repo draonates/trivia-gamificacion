@@ -9,41 +9,49 @@ import matplotlib.pyplot as plt
 
 st.set_page_config(page_title='Trivia Deformación Plástica', layout='centered')
 
-# Aplicar estilo blanco con letras negras
 st.markdown("""
     <style>
-    body {
-        background-color: white;
-        color: black;
-    }
-    .stApp {
-        background-color: white;
-        color: black;
-    }
-    .css-1d391kg, .css-qbe2hs, .css-ffhzg2, .st-bc, .st-c5 {
+    html, body, .stApp {
         background-color: white !important;
         color: black !important;
     }
-    .css-1v0mbdj, .css-1v0mbdj input, .stTextInput input {
-        background-color: white !important;
-        color: black !important;
-        border: 1px solid #999;
-    }
-    .css-1cpxqw2 {
-        color: black !important;
-    }
-    .stButton button {
-        color: black !important;
-        background-color: white !important;
-        border: 1px solid black;
-    }
-    </style>
-""", unsafe_allow_html=True)
 
-st.markdown("""
-    <style>
-    /* Ajuste específico para textos dentro de st.success, st.warning, st.error */
+    /* Títulos */
+    h1, h2, h3, h4, h5, h6 {
+        color: black !important;
+    }
+
+    /* Texto general */
+    .css-18ni7ap, .css-1v0mbdj, .css-1cpxqw2, .stMarkdown, .stTextInput, .stSelectbox {
+        color: black !important;
+    }
+
+    /* Inputs y selects */
+    input, textarea, select {
+        background-color: white !important;
+        color: black !important;
+        border: 1px solid #333 !important;
+    }
+
+    /* Botones */
+    .stButton>button {
+        color: black !important;
+        background-color: white !important;
+        border: 1px solid black !important;
+    }
+
+    /* Alertas de éxito, error, advertencia */
     .stAlert > div {
+        color: black !important;
+    }
+
+    /* Radio buttons */
+    .css-qbe2hs, .css-1wivap2 {
+        color: black !important;
+    }
+
+    /* Opciones del radio */
+    label, .stRadio label {
         color: black !important;
     }
     </style>
