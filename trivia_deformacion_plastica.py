@@ -840,28 +840,28 @@ else:
         except Exception as e:
             st.warning(f"No se pudo guardar en Google Sheets: {e}")
 
-    st.markdown('---')
+  #  st.markdown('---')
         
-    st.markdown(' Revisión de Respuestas')
+  #  st.markdown(' Revisión de Respuestas')
 
         
-for i, h in enumerate(st.session_state.historial):
-            pregunta = lista_preguntas[i]
-            respuesta_correcta = pregunta['options'][pregunta['answer']]
-            es_correcta = h['respuesta'] == respuesta_correcta
+#for i, h in enumerate(st.session_state.historial):
+ #           pregunta = lista_preguntas[i]
+  #          respuesta_correcta = pregunta['options'][pregunta['answer']]
+   #         es_correcta = h['respuesta'] == respuesta_correcta
 
-            st.markdown(f'**{i+1}. {pregunta["question"]}**')
-            if pregunta['formula']:
-                st.latex(pregunta['formula'])
-
-            for opt in pregunta['options']:
-                if opt == h['respuesta'] and es_correcta:
-                    st.success(f'Tu respuesta: {opt} ✅')
-                elif opt == h['respuesta'] and not es_correcta:
-                    st.error(f'Tu respuesta: {opt} ❌')
-                elif opt == respuesta_correcta:
-                    st.info(f'Respuesta correcta: {opt}')
-
-            st.markdown('---')
+    #        st.markdown(f'**{i+1}. {pregunta["question"]}**')
+     #       if pregunta['formula']:
+      #          st.latex(pregunta['formula'])
+#
+ #           for opt in pregunta['options']:
+  #              if opt == h['respuesta'] and es_correcta:
+   #                 st.success(f'Tu respuesta: {opt} ✅')
+    #            elif opt == h['respuesta'] and not es_correcta:
+     #               st.error(f'Tu respuesta: {opt} ❌')
+      #          elif opt == respuesta_correcta:
+       #             st.info(f'Respuesta correcta: {opt}')
+#
+ #           st.markdown('---')
 
       
