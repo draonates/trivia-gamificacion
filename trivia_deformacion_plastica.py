@@ -808,20 +808,20 @@ else:
             'Fecha': datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
         }
 
-        archivo = 'resultados_deformacion.csv'
-        df = pd.DataFrame([Resultados])
-        if os.path.exists(archivo):
-            df.to_csv(archivo, mode='a', header=False, index=False)
-        else:
-            df.to_csv(archivo, index=False)
+       # archivo = 'resultados_deformacion.csv'
+       # df = pd.DataFrame([Resultados])
+       # if os.path.exists(archivo):
+       #     df.to_csv(archivo, mode='a', header=False, index=False)
+      #  else:
+       #     df.to_csv(archivo, index=False)
 
         # Guardar también en Excel
-        try:
-            archivo_excel = 'resultados_deformacion.xlsx'
-            df_total = pd.read_csv(archivo)
-            df_total.to_excel(archivo_excel, index=False)
-        except Exception as e:
-            st.warning(f'No se pudo guardar el archivo Excel: {e}')
+    #    try:
+    #        archivo_excel = 'resultados_deformacion.xlsx'
+     #       df_total = pd.read_csv(archivo)
+      #      df_total.to_excel(archivo_excel, index=False)
+     #   except Exception as e:
+      #      st.warning(f'No se pudo guardar el archivo Excel: {e}')
 
         import gspread
 from oauth2client.service_account import ServiceAccountCredentials
