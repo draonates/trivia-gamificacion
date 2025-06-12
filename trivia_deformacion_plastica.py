@@ -852,7 +852,7 @@ except Exception as e:
 
     st.markdown('---')
         
-    st.markdown('## 🤮 Revisión de Respuestas')
+    st.markdown(' Revisión de Respuestas')
 
         
 for i, h in enumerate(st.session_state.historial):
