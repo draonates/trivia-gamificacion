@@ -952,7 +952,7 @@ if 'nombre' not in st.session_state:
     st.session_state.puntaje = 0
     st.session_state.historial = []
 
-st.title('Trivia: Fundamentos de la Deformación Plástica')
+st.title('GAMTRIV - I25-011')
 
 #if st.session_state.nombre == '':
  #   st.session_state.nombre = st.text_input('Ingresa tu nombre:')
