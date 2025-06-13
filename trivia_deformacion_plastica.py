@@ -9,18 +9,97 @@ import matplotlib.pyplot as plt
 
 st.set_page_config(page_title='Trivia Deformación Plástica', layout='centered')
 
-# Forzar el tema claro en Streamlit (opcional si usas tema automático)
-st.markdown(
-    """
-    <meta name="theme-color" content="#ffffff">
+st.markdown("""
     <style>
-        html[data-theme="dark"] {
-            filter: invert(100%) hue-rotate(180deg);
-        }
+    html, body, .stApp {
+        background-color: white !important;
+        color: black !important;
+        font-family: 'Segoe UI', sans-serif;
+    }
+
+    h1, h2, h3, h4, h5 {
+        color: black !important;
+        font-weight: bold !important;
+    }
+
+    .stMarkdown, .css-1v0mbdj, .css-18ni7ap {
+        color: black !important;
+        font-size: 16px !important;
+    }
+
+    /* Inputs y selects */
+    input, textarea, select, .stTextInput input, .stSelectbox div[role="combobox"] {
+        background-color: white !important;
+        color: black !important;
+        border: 1px solid #333 !important;
+        border-radius: 6px !important;
+        padding: 6px !important;
+    }
+
+    /* Dropdown fix */
+    .stSelectbox div[data-baseweb="select"] {
+        background-color: white !important;
+        color: black !important;
+    }
+
+    /* Forzar color y fondo en opciones desplegadas */
+    .stSelectbox ul {
+        background-color: white !important;
+        color: black !important;
+    }
+
+    /* Botones */
+    .stButton > button {
+        color: black !important;
+        background-color: white !important;
+        border: 2px solid black !important;
+        border-radius: 8px !important;
+        padding: 0.5em 1em !important;
+        font-weight: bold;
+        transition: 0.3s ease;
+    }
+
+    .stButton > button:hover {
+        background-color: #eee !important;
+        border-color: #111 !important;
+    }
+
+    /* Radio buttons */
+    div[data-baseweb="radio"] div[role="radio"] {
+        background-color: white !important;
+        color: black !important;
+        opacity: 1 !important;
+    }
+
+    div[data-baseweb="radio"] div[role="radio"] * {
+        color: black !important;
+        opacity: 1 !important;
+    }
+
+    .stRadio label, .stRadio div {
+        color: black !important;
+        opacity: 1 !important;
+    }
+
+    /* Alertas */
+    .stAlert > div {
+        color: black !important;
+        font-size: 15px !important;
+    }
+
+    label, .stSelectbox label {
+        color: black !important;
+    }
+
+    .block-container {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
     </style>
-    """,
-    unsafe_allow_html=True
-)
+""", unsafe_allow_html=True)
+
 
 
 
