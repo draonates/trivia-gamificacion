@@ -7,6 +7,9 @@ import datetime
 import os
 import matplotlib.pyplot as plt
 
+[theme]
+base="light"
+
 st.set_page_config(page_title='Trivia Deformación Plástica', layout='centered')
 
 st.markdown("""
