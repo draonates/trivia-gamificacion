@@ -1,3 +1,17 @@
+import streamlit as st
+
+st.set_page_config(
+    page_title="Trivia Deformación Plástica",
+    layout="centered"
+)
+
+# Luego puedes importar el resto
+import pandas as pd
+import datetime
+import os
+import matplotlib.pyplot as plt
+import math
+
 import gspread
 import base64
 import requests
