@@ -212,7 +212,19 @@ preguntas['Certamen 2']['Fácil'] += [
         'options': ['Elástico puro', 'Viscoplástico', 'Perfectamente plástico', 'Amorfo'],
         'answer': 1,
         'formula': ''
-    }   
+    },
+    {
+        'question': '¿Cual es la zona microestructural más afectada por el campo plástico en la punta de una grieta?',
+        'options': ['Núcleo elástico', 'Zona de transición', 'Zona de plástificación', 'Región plástica'],
+        'answer': 2,
+        'formula': ''
+    },
+     {
+        'question': '¿Qué define el criterio de Von Mises aplicado a la punta de una grieta?',
+        'options': ['La tensión normal en el eje longitudinal', 'La tensión tangencial en el frente de grieta', 'El inicio del flujo plástico cuando la energía distorsional alcanza un valor crítico', 'El módulo de elasticidad del material'],
+        'answer': 2,
+        'formula': ''
+    }
 ]
 
 preguntas['Certamen 2']['Medio'] += [
