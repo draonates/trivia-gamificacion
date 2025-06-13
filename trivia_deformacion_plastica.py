@@ -287,7 +287,37 @@ preguntas['Certamen 2']['Medio'] += [
         'options': ['La dislocación sale temporalmente de su plano de deslizamiento debido a campos difusionales cuando se encuentra con un sistema de bloqueo', 'La dislocación se mueve perpendicularmente a su plano de deslizamiento mediante difusión de vacancias', 'La dislocación se mueve a otro plano de deslizamiento activo mediante difusión de vacancias', 'La dislocación pasa a ser sesil'],
         'answer': 1,
         'formula': ''
-    }
+    },
+    {
+        'question': '¿Qué representa el parámetro K en mecánica de la fractura?',
+        'options': ['Tasa de propagación de grietas', 'Absorción de energía', 'Factor de intensidad de tensiones en la punta de grieta', 'b) y c)'],
+        'answer': 2,
+        'formula': ''
+    },
+    {
+        'question': '¿Qué condición permite el crecimiento estable de grietas según el criterio energético?',
+        'options': ['G = R y dG/da ≤ dR/da', 'G > R y dG/da > dR/da', 'G < R y dG/da = dR/da', 'G = R y dG/da ≥ dR/da'],
+        'answer': 0,
+        'formula': ''
+    },
+     {
+        'question': '¿Cuál es el significado físico de la tenacidad a la fractura KIC?',
+        'options': ['Esfuerzo necesario para iniciar plasticidad', 'Carga crítica para propagación estable', 'Capacidad del material para resistir la propagación de grietas en deformación plana', 'Energía almacenada en el volumen del material'],
+        'answer': 2,
+        'formula': ''
+    },
+    {
+        'question': '¿Cuál es la expresión de la energía de fractura en deformación plana para el modo I?',
+        'options': ['G = K²/E', 'G = K²/(E/(1 - ν²))', 'G = σ²·a/πE', 'G = 2γ'],
+        'answer': 1,
+        'formula': ''
+    },
+    {
+        'question': '¿Qué sucede si en la propagación de la grieta se cumple que G>R y dG/da > dR/da?',
+        'options': ['La grieta se detiene', 'La grieta crece de forma estable', 'La propagación es estable', 'La propagación es inestable', 'Se genera endurecimiento por deformación'],
+        'answer': 2,
+        'formula': ''
+    },
 ]
 
 
