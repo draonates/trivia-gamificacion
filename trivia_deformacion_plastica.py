@@ -317,7 +317,7 @@ preguntas['Certamen 2']['Medio'] += [
         'options': ['La grieta se detiene', 'La grieta crece de forma estable', 'La propagación es inestable', 'Se genera endurecimiento por deformación'],
         'answer': 2,
         'formula': ''
-    },
+    }
 ]
 
 
