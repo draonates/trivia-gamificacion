@@ -1079,3 +1079,62 @@ else:
         except Exception as e:
             st.warning(f"No se pudo guardar en Google Sheets: {e}")
 
+# ─── 1. Importaciones ─────────────────────────────────────────────
+import streamlit as st
+import math
+# (otros import como pandas, matplotlib, etc.)
+
+# ─── 2. Configuración ─────────────────────────────────────────────
+st.set_page_config(page_title='Trivia Deformación Plástica', layout='centered')
+
+# ─── 3. Sidebar ──────────────────────────────────────────────────
+opcion = st.sidebar.radio("Menú principal", ["Inicio", "Trivia", "Resultados", "Ejercicios Resueltos"])
+
+# ─── 4. Menú Principal ────────────────────────────────────────────
+if opcion == "Inicio":
+    st.title("Bienvenido a la Trivia de Deformación Plástica")
+elif opcion == "Trivia":
+    # Lógica de trivia
+    pass
+elif opcion == "Resultados":
+    # Lógica para mostrar resultados
+    pass
+elif opcion == "Ejercicios Resueltos":
+    ejercicio = st.selectbox("Selecciona un ejercicio resuelto:", ["Ejercicio 2.9"])
+    if ejercicio == "Ejercicio 2.9":
+        ejercicio_2_9()
+
+# ─── 5. Funciones auxiliares ─────────────────────────────────────
+def ejercicio_2_9():
+    # [código mostrado anteriormente]
+    st.markdown("### Ejercicio 2.9 - Curva R y condiciones críticas de fractura")
+    st.latex(r"""
+    R(a) = \frac{K_{IC}^2}{E} + 0.1(a - a_0)^2 \quad \text{con } K_{IC} = 150 \, \text{MPa} \sqrt{m}, E = 210{,}000 \, \text{MPa}
+    """)
+    st.markdown("""
+    Donde:  
+    - $a_0 = 30$ mm  
+    - $\Delta a = 3.1$ mm  
+    - $a = a_0 + \Delta a = 33.1$ mm  
+    """)
+    
+    # Datos
+    E = 210000  # MPa
+    K_IC = 150  # MPa·√m
+    a_0 = 0.03  # m
+    delta_a = 0.0031  # m
+    a = a_0 + delta_a  # m
+
+    # Cálculo de R(a)
+    R = (K_IC**2 / E) + 0.1 * (a - a_0)**2  # MN/m
+    st.latex(fr"R(a) = \frac{{150^2}}{{210000}} + 0.1 \cdot ({a:.4f} - {a_0:.4f})^2 = {R:.4f} \, \text{{MN/m}}")
+
+    # Cálculo de σc (tensión crítica)
+    from math import sqrt, pi
+
+    sigma_c = sqrt(R * E / (pi * a))
+    st.latex(fr"\sigma_c = \sqrt{{\frac{{{R:.4f} \cdot {E}}}{{\pi \cdot {a:.4f}}}}} = {sigma_c:.2f} \, \text{{MPa}}")
+
+    # Cálculo de Kc
+    K_c = sqrt(E * R)
+    st.latex(fr"K_c = \sqrt{{{E} \cdot {R:.4f}}} = {K_c:.2f} \, \text{{MPa}} \sqrt{{m}}")
