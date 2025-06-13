@@ -97,6 +97,18 @@ st.markdown("""
         padding-bottom: 2rem;
         padding-left: 3rem;
         padding-right: 3rem;
+
+/* Selector de mayor especificidad para el combobox */
+div[data-baseweb="select"] > div {
+    background-color: white !important;
+    color: black !important;
+    border: 1px solid #333 !important;
+}
+
+/* También aplicar estilo a opciones seleccionadas */
+div[data-baseweb="select"] span {
+    color: black !important;
+}       
     }
     </style>
 """, unsafe_allow_html=True)
