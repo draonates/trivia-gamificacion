@@ -1038,6 +1038,25 @@ else:
         st.balloons()
         st.success(f'🎉 {st.session_state.nombre}, obtuviste {st.session_state.puntaje} de {len(lista_preguntas)} en nivel {nivel_actual}')
 
+        # Mostrar las preguntas incorrectas
+        st.markdown("## ❌ Preguntas respondidas incorrectamente:")
+        incorrectas = [h for h in st.session_state.historial if not h['correcta']]
+        if incorrectas:
+            for i, item in enumerate(incorrectas, 1):
+                st.markdown(f"**{i}.** {item['pregunta']}")
+                st.markdown(f"- Tu respuesta: _{item['respuesta']}_")
+                # Encontrar la opción correcta
+                for pregunta in lista_preguntas:
+                    if pregunta['question'] == item['pregunta']:
+                        correcta = pregunta['options'][pregunta['answer']]
+                        break
+                st.markdown(f"- Respuesta correcta: _{correcta}_")
+                st.markdown("---")
+        else:
+            st.markdown("🎯 ¡Respondiste todo correctamente!")
+
+
+        
         resultado = {
             'Nombre': st.session_state.nombre,
             'Certamen': certamen_actual,
